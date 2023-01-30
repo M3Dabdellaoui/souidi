@@ -1,0 +1,78 @@
+<?php
+
+// Connect to the database
+$con = mysqli_connect("hostname","username","password","database_name");
+
+// Fetch appointments from the database
+$query = "SELECT * FROM appointments WHERE status = 'confirmed'";
+$result = mysqli_query($con, $query);
+
+// Initialize the Google Calendar API
+$client = new Google_Client();
+$client->setAuthConfig('path/to/credentials.json');
+$client->addScope(Google_Service_Calendar::CALENDAR);
+$calendar = new Google_Service_Calendar($client);
+
+// Loop through the appointments and add them to the calendar
+while($row = mysqli_fetch_assoc($result)) {
+    $event = new Google_Service_Calendar_Event();
+    $event->setSummary($row['title']);
+    $event->setDescription($row['description']);
+    $start = new Google_Service_Calendar_EventDateTime();
+    $start->setDateTime($row['start_time']);
+    $event->setStart($start);
+    $end = new Google_Service_Calendar_EventDateTime();
+    $end->setDateTime($row['end_time']);
+    $event->setEnd($end);
+    $calendar->events->insert('primary', $event);
+}
+
+// Close the connection
+mysqli_close($con);
+
+?>
+Note: This is an example of how you might fetch appointments from a database and display them in the Google Calendar API after they have been confirmed. You will need to customize this code to match your specific database and Google Calendar API configuration.
+
+
+
+
+The credentials.json file is a file that you can download from the Google Cloud Platform (GCP) when you set up a project and enable the Google Calendar API. It contains the private key and other information that is needed to authenticate your application with the Google Calendar API.
+
+An example of what a credentials.json file might look like is:
+
+{
+"type": "service_account",
+"project_id": "your-project-id",
+"private_key_id": "your-private-key-id",
+"private_key": "-----BEGIN PRIVATE KEY-----\nyour-private-key\n-----END PRIVATE KEY-----\n",
+"client_email": "your-client-email",
+"client_id": "your-client-id",
+"auth_uri": "https://accounts.google.com/o/oauth2/auth",
+"token_uri": "https://oauth2.googleapis.com/token",
+"auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+"client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/your-client-email"
+}
+
+You should replace the values in the example above with the actual values from your own credentials.json file. Keep in mind that the credentials.json file contains sensitive information and should be kept private and secure.
+
+To get the credentials for the Google Calendar API, you will need to do the following steps:
+
+Go to the Google Cloud Platform (GCP) and create a new project or select an existing one.
+
+On the left sidebar, click on the "Enable APIs and Services" button.
+
+Search for the "Google Calendar API" and enable it.
+
+On the left sidebar, click on the "Credentials" tab.
+
+Click on the "Create Credentials" button and select "Service Account"
+
+Fill out the form for your service account and click on the "Create" button.
+
+Click on the "Create Key" button and select "JSON" as the key type.
+
+A JSON file will be downloaded, this is your credentials.json file, save it in a secure location.
+
+Make sure to also set the client_email in the credentials.json file as a calendar delegate for the calendar you want to access on the Google Calendar UI.
+
+Once you have completed these steps, you will have the credentials that you need to authenticate your application with the Google Calendar API.

@@ -1,0 +1,43 @@
+CREATE TABLE employes (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nom_complet VARCHAR(255) NOT NULL,
+    nom_completAr VARCHAR(255) NOT NULL,
+    domaine VARCHAR(255) NOT NULL,
+    domaineAr VARCHAR(255) NOT NULL,
+    descr TEXT NOT NULL,
+    descrAr TEXT NOT NULL,
+    file_path VARCHAR(255) NULL,
+    visibility INT UNSIGNED NOT NULL
+	
+);
+
+ CREATE TABLE partners (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nom_complet VARCHAR(255) NOT NULL,
+    nom_completAr VARCHAR(255) NOT NULL,
+    domaine VARCHAR(255) NOT NULL,
+    domaineAr VARCHAR(255) NOT NULL,
+    descr TEXT NOT NULL,
+    descrAr TEXT NOT NULL,
+    file_path VARCHAR(255) NULL,
+    visibility INT UNSIGNED NOT NULL
+	
+);
+
+
+CREATE TABLE users (
+   id int(10) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   login varchar(40) NOT NULL,
+   pass varchar(40) NOT NULL
+);
+
+CREATE TABLE news (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    titleAr VARCHAR(255) NOT NULL,
+    ndate VARCHAR(255) NOT NULL,
+    descrption TEXT NOT NULL,
+    descriptionAr TEXT NOT NULL,
+   
+	
+);
