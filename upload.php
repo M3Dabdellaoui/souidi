@@ -16,6 +16,7 @@ if ($hash === @$_GET['token']) {
     header("Location:./index.php");
     exit; 
 } 
+include('admin/db.php');
 ?>
 
 
@@ -105,11 +106,9 @@ if ($hash === @$_GET['token']) {
                     </div>
                     </nav>
                     <!-- navbar end -->
-        <div class="container">
-            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-3 text-white text-uppercase">UPLOAD YOUR FILE</h3>
-                
-                    <p class="m-0 text-uppercase">HERE</p>
+            <div class="container">
+                <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-3 text-white text-uppercase">Envoyez vos fichiers ici. </h3>
                 </div>
             </div>
         </div>
@@ -122,10 +121,6 @@ if ($hash === @$_GET['token']) {
         <?php
             @$mssg="";
             if(isset($_POST["submit"])){
-                #@$mssg.="Nom du fichier : <b>".$_FILES["monfichier"]["name"]."</b><br />";
-                #@$mssg.="Nom temporaire du fichier : <b>".$_FILES["monfichier"]["tmp_name"]."</b><br />";
-                #@$mssg.="Type du fichier : <b>".$_FILES["monfichier"]["type"]."</b><br />";
-                #@$mssg.="Taille du fichier : <b>".$_FILES["monfichier"]["size"]."</b><br />";
                 if($_FILES["monfichier"]["type"]=="application/pdf"){
                     if(!file_exists("UPLOAD/".$_POST["file_name"]))
                         {
@@ -247,18 +242,40 @@ if ($hash === @$_GET['token']) {
                 </div>
             </div>
             <div class="col-lg-4">
+            <?php
+            // Get the post variables
+            if(isset($_POST['sinscrire'])){
+                $client_email = $_POST['client_email'];
+                if(!empty($client_email)){
+                    // Prepare the insert statement
+                    $client_stmt = $conn->prepare("INSERT INTO potential_clients (email) VALUES (:email)");
+                    $client_stmt->bindParam(':email', $client_email);
+                     // Execute the statement
+                    $client_stmt->execute();
+                    // Close the connection
+                    $conn = null;
+                }
+
+
+            }
+
+            ?>
                 <div>
+                    <form action="" method="POST">
                     <h4 class="font-weight-semi-bold text-primary mb-4">News</h4>
                     <p>S'inscrire pour recevoir des nouvelles.</p>
                     <div class="w-100">
                         <div class="input-group">
                             <div class="input-group-append">
-                                <button class="btn btn-primary px-4">S'inscrire</button>
+                               
+                                    <input type="submit" class="btn btn-primary px-4" name="sinscrire" placeholder="s'inscrire">
+                                
                             </div>
-                            <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
+                            <input type="text" name="client_email" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
 
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

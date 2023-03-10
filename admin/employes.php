@@ -133,7 +133,6 @@
         <img src="../img/new_logo.png" alt="twbs" height="80px" class="flex-shrink-0">
       </a>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
         <a type="button" class="btn btn-primary" href="deconnexion.php">Déconnexion</a>
       </div>
     </header>
@@ -159,7 +158,7 @@
               <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                   <h6 class="mb-0">Gérer les employés</h6>
-                  <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                  <p class="mb-0 opacity-75">Ajouter, Supprimer ou modifier les coordonnées d'un emplyées.</p>
                 </div>
               </div>
             </a>
@@ -177,7 +176,7 @@
               <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                   <h6 class="mb-0">Actualités</h6>
-                  <p class="mb-0 opacity-75">Some placeholder content in a paragraph that goes a little longer so it wraps to a new line.</p>
+                  <p class="mb-0 opacity-75">Ajouter, Supprimer, ou ajouter des actualités.</p>
                 </div>
               </div>
             </a>
@@ -196,6 +195,24 @@
                 <div>
                   <h6 class="mb-0">Gestion de fichiers</h6>
                   <p class="mb-0 opacity-75">gérer les fichiers des clients.</p>
+                </div>
+              </div>
+            </a>
+            <a href="calendar.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/calendar.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Gestion des rendez-vous</h6>
+                  <p class="mb-0 opacity-75">consulter les rendez-vous avec clients.</p>
+                </div>
+              </div>
+            </a>
+            <a href="potential_clients.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/email.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Clients Potentiel</h6>
+                  <p class="mb-0 opacity-75">Télecharger la liste des emails des clients potentiel</p>
                 </div>
               </div>
             </a>
@@ -263,7 +280,7 @@
       </div>
       <div class="col-md-7 col-lg-8">
       <button class="btn btn-sm btn-outline-secondary float-end" data-bs-toggle="modal" data-bs-target="#addEmployer"><img src="../img/add_sign.png" alt="twbs" width="30" height="30" class="rounded-circle flex-shrink-0">Ajouter un employé</button>
-        <h4 class="mb-3">Gérer les employés</h4>
+        <h4 class="mb-3"><img src="../img/employees.png" alt="twbs" height="100" class="flex-shrink-0"> Gérer les employés</h4>
         <table class="table">
             <thead>
                 <tr>
@@ -304,8 +321,8 @@
                 ?>
                 <tr>
                 <td><?= $employe['nom_complet'] ?></td>
-                <td><?= $employe['domaine'] ?></td>
-                <td ><?=substr($employe['descr'],0,40)." ..." ?></td>
+                <td><?= substr($employe['domaine'],0,15) ?></td>
+                <td ><?=substr($employe['descr'],0,20)." ..." ?></td>
                 <td>
                                 <a data-bs-toggle="modal" data-bs-target="#editEmployer<?=$employe['id']?>"><img src="../img/modify.png" alt="twbs" width="32" height="32" class="action flex-shrink-0"></a>
                                 <script language="javascript">

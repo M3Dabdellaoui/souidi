@@ -78,6 +78,7 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
       .page-list{
         display:inline-block; 
         text-align: center; 
@@ -112,6 +113,12 @@
       width:40px;
       transition-duration:0.3s;
       }
+      .action:hover{
+        background-color:rgba(0,0,0,0.2);
+        border-radius:10px;
+        transition-duration:0.2s;
+        
+      }
     </style>
 
     
@@ -127,7 +134,6 @@
         <img src="../img/new_logo.png" alt="twbs" height="80px" class="flex-shrink-0">
       </a>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
         <a type="button" class="btn btn-primary" href="deconnexion.php">Déconnexion</a>
       </div>
     </header>
@@ -153,7 +159,7 @@
               <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                   <h6 class="mb-0">Gérer les employés</h6>
-                  <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                  <p class="mb-0 opacity-75">Ajouter, Supprimer ou modifier les coordonnées d'un emplyées.</p>
                 </div>
               </div>
             </a>
@@ -171,16 +177,56 @@
               <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                   <h6 class="mb-0">Actualités</h6>
-                  <p class="mb-0 opacity-75">Some placeholder content in a paragraph that goes a little longer so it wraps to a new line.</p>
+                  <p class="mb-0 opacity-75">Ajouter, Supprimer, ou ajouter des actualités.</p>
                 </div>
               </div>
             </a>
+
+            <div class="modal fade" id="addNews" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">ajouter des actualitées </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form action="api/add_news.php" method="post"  enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="" class="form-label">Titre</label>
+                        <input required type="text" class="form-control" name="title">
+                    </div>
+                    <div class="mb-3" dir="rtl">
+                        <label class="form-label">عنوان</label>
+                        <input required dir="rtl" type="text" class="form-control" name="titleAr">
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="" class="form-label">Date</label>
+                        <input required type="date" class="form-control" name="ndate">
+                    </div> -->
+                    <div class="mb-3">
+                    <div class="form-floating">
+                        <textarea required class="form-control" name="desc" placeholder="Description" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Déscription</label>
+                    </div>
+                    </div>
+                    <div class="mb-3" dir="rtl">
+                    <div class="form-floating">
+                        <textarea required class="form-control" name="descAr" placeholder="Description" id="floatingTextarea3" style="height: 100px"></textarea>
+                        <label for="floatingTextarea3">وصف</label>
+                    </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sauvegarder</button>
+                </form>
+                </div>
+                </div>
+            </div>
+            </div>
             <a href="links.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
               <img src="../img/link.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
               <div class="d-flex gap-2 w-100 justify-content-between">
                 <div>
                   <h6 class="mb-0">Lien de téléchargement</h6>
-                  <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+                  <p class="mb-0 opacity-75">ce lien se change chaque 24h.</p>
                 </div>
               </div>
             </a>
@@ -193,71 +239,139 @@
                 </div>
               </div>
             </a>
+            <a href="calendar.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/calendar.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Gestion des rendez-vous</h6>
+                  <p class="mb-0 opacity-75">consulter les rendez-vous avec clients.</p>
+                </div>
+              </div>
+            </a>
+            <a href="potential_clients.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/email.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Clients Potentiel</h6>
+                  <p class="mb-0 opacity-75">Télecharger la liste des emails des clients potentiel</p>
+                </div>
+              </div>
+            </a>
           </div>
-          
+       
+        
 
         
-      
+      </div>
       <div class="col-md-7 col-lg-8">
-      <button class="btn btn-sm btn-outline-secondary float-end" data-bs-toggle="modal" data-bs-target="#addPartner"><img src="../img/add_sign.png" alt="twbs" width="30" height="30" class="rounded-circle flex-shrink-0">Ajouter un partenaire</button>
-        <h4 class="mb-3">Gérer les partenaires</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                <th scope="col">Nom complet</th>
-                <th scope="col">Practice Area</th>
-                <th scope="col">Description</th>
-                <th scope="col">Action</th>
-                <th scope="col">Etat</th>
+        <h4 class="mb-3"><img src="../img/calendar-color.png" alt="twbs" height="120px" class="rounded-circle flex-shrink-0">Gérer les Rendez-vous</h4>
+        <?php
+        //Recuperer le nombre d'enregistrement
+        $tcount = $conn->prepare("select count(id) as cpt from appointments");
+        $tcount->execute();
+        $count = $tcount->fetchAll(PDO::FETCH_ASSOC);                  
 
-                </tr>
-            </thead>
-                    <tbody>
-                        <?php
-                        //Recuperer le nombre d'enregistrement
-                        $tcount = $conn->prepare("select count(id) as cpt from partners");
-                        $tcount->execute();
-                        $count = $tcount->fetchAll(PDO::FETCH_ASSOC);
+        // pagination
+        @$page=$_GET["page"];
+        if(empty($page)) $page=1;
+        $nbr_elements_par_page=6; // 2 rows * 3 appointments per row
+        $nbr_de_pages=ceil($count[0]["cpt"]/$nbr_elements_par_page);
+        $debut=($page-1)*$nbr_elements_par_page;
 
-                        // pagination
-                        @$page=$_GET["page"];
-                        if(empty($page)) $page=1;
-                        $nbr_elements_par_page=5;
-                        $nbr_de_pages=ceil($count[0]["cpt"]/$nbr_elements_par_page);
-                        $debut=($page-1)*$nbr_elements_par_page;
+        //recuperation des données de la base de données
+        $stmt = $conn->prepare("SELECT * FROM  appointments ORDER BY `id` DESC limit $debut,$nbr_elements_par_page");
+        $stmt->execute();
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+                      
+        <div class="row mb-3 text-center">
+          <?php
+          $counter = 0;
+          foreach($results as $appointment) {
+            //method
+            if ($appointment['method']==1){
+              $method="à distance";
+            }else{
+              $method="au bureau";
+            }
+            //service
+            switch($appointment['service']){
+              case 1 :
+                $service="Droit des affaires";
+              case 2 :
+                $service="Rédaction des contact et actes juridique";
+              case 3:
+                $service="Mode alternatifs de réglement des conflicts";
+            }
+          ?>
+                        
+          <div class="col-md-4">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary" style="display:flex;justify-content:space-between;">
+                <h5 class="my-0 fw-normal">Rendez-vous</h5>
+                <a onClick="deleteItem(<?= $appointment['id'] ?>)"><img src="../img/delete_appointment.png" alt="twbs" width="32" height="32" class="action flex-shrink-0"></a>
+              </div>
+              <div class="card-body" style="height:350px;">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li><b>Email</b> : <?=$appointment['email']?><li>
+                  <li><b>Nom Complet</b> :<?=$appointment['nom_complet']?></li>
+                  <li><b>Phone</b> : <?=$appointment['phone']?></li>
+                  <li><b>Date</b> : <?=$appointment['Rdate']?></li>
+                  <li><b>Heure</b> : <?=$appointment['Rhour']?></li>
+                  <li><b>Methode</b> : <?=$method?></li>
+                  <li><b>Service</b> : <?=$service?></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <?php
+            $counter++;
+            if ($counter == 3) {
+              $counter = 0;
+              echo '</div><div class="row mb-3 text-center">';
+            }
+          }
+          ?> 
+        </div>
 
-                        //recuperation des données de la base
-                        $stmt = $conn->prepare("SELECT * FROM appointments ORDER BY `id` DESC limit $debut,$nbr_elements_par_page");
-                        $stmt->execute();
-                        $appointment_results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                        
-                        foreach ($appointment_results as  $appointment) {
-                                    
-                        ?>
-                            <div>
-                                hey
-                            <div>
-                        
-                        
-                        <?php } ?>
-                    </tbody>
-            </table>
+
 
             <!-- list des pages start -->
             <div id="pagination">
               <?php
+            
                 for($i=1;$i<=$nbr_de_pages;$i++){
-                  if($page!=$i)
-                    echo "<a class='page-list' href='?page=$i'style=''>$i</a>";
-                  else
-                    echo "<a class='page-list-active' href='?page=$i'style=''>$i</a>";
+                      if($page!=$i)
+                        echo "<a class='page-list' href='?page=$i'style=''>$i</a>";
+                      else
+                        echo "<a class='page-list-active' href='?page=$i'style=''>$i</a>";
                 }
               ?>
             </div>
-            <!-- list des pages start -->
-
-      </div>
+            <!-- list des pages end -->
+            
     </div>
+    <script language="javascript">
+                                  function deleteItem(id) {
+                                    if (confirm("êtes-vous sûr de vouloir supprimer cet employé?")) {
+                                      var xhr = new XMLHttpRequest();
+                                      xhr.open("GET", "http://localhost/project-web/admin/api/delete_appointment.php?id=" + id, true);
+                                      xhr.onreadystatechange = function() {
+                                        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                                          alert("Rendez-vous supprimé avec succès.");
+                                          window.location="http://localhost/project-web/admin/calendar.php";
+                                          
+                                        } 
+                                        // else {
+                                        //   alert("Une erreur s'est produite lors de la suppression de l'employé.");
+                                        // }
+                                      };
+                                      xhr.send();
+                                    } else {
+                                      alert("Vous avez refusé de continuer.");
+                                    }
+                                  }
+                                </script>
   </main>
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
@@ -270,3 +384,4 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
   </body>
 </html>
+

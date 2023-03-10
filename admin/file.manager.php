@@ -117,7 +117,6 @@
         <img src="../img/new_logo.png" alt="twbs" height="80px" class="flex-shrink-0">
       </a>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
         <a type="button" class="btn btn-primary" href="deconnexion.php">Déconnexion</a>
       </div>
     </header>
@@ -174,10 +173,38 @@
                 </div>
               </div>
             </a>
+            <a href="file.manager.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/file_manager.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Gestion de fichiers</h6>
+                  <p class="mb-0 opacity-75">gérer les fichiers des clients.</p>
+                </div>
+              </div>
+            </a>
+            <a href="calendar.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/calendar.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Gestion des rendez-vous</h6>
+                  <p class="mb-0 opacity-75">consulter les rendez-vous avec clients.</p>
+                </div>
+              </div>
+            </a>
+            <a href="potential_clients.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/email.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Clients Potentiel</h6>
+                  <p class="mb-0 opacity-75">Télecharger la liste des emails des clients potentiel</p>
+                </div>
+              </div>
+            </a>
           </div>        
       </div>
+
       <div class="col-md-7 col-lg-8">
-      <h4 class="mb-3">Gérer les employés</h4>
+      <h4 class="mb-3"><img src="../img/files.png" alt="twbs" height="150" class="flex-shrink-0">  Gérer les fichiers</h4>
         <table class="table">
             <thead>
                 <tr>
@@ -187,52 +214,83 @@
             </thead>
             <tbody>
             <?php
-            $dir = "upload/";
-            
-            // how many files exists in the directory
-            $files = scandir($dir);
-            
-            $file_count = count($files) - 2; // subtract 2 for . and ..
-            
-            // pagination
-            @$page = $_GET["page"];
-            if(empty($page)) $page = 1;
-            $nbr_elements_par_page = 5;
-            $nbr_de_pages = ceil($file_count / $nbr_elements_par_page);
-            $debut = 2 + ($page - 1) * $nbr_elements_par_page ;
-            
-            // Loop through the directory
-            $files = array_slice(scandir($dir), $debut, 5); // slice array starting from index 2
-            foreach ($files as $file) {
-                $id=uniqid();
-                if (!is_dir($file)) {
-                    // Print the file name and a link to download it
-                    echo "<tr>";
-                    echo "   <td>". $file." </td>";
-                    echo "   <td><a href='api/download.php?file=".$file."'><img src='../img/download.png' alt='twbs' width='32' height='32' class='action flex-shrink-0'></a>";
-                    echo "   <a href='api/delete_file.php?file=".$file."&id=".$id."'><img src='../img/delete.png' alt='twbs' width='32' height='32' class='action flex-shrink-0'></a></td>";
-                    echo "</tr>";
-                  
-                }
-            }
-            
-        ?>
-        <tbody>
-        </table>
-        <!-- list des pages start -->
-        <div id="pagination">
-            <?php
-                for($i = 1; $i <= $nbr_de_pages; $i++) {
-                    if($page != $i)
-                        echo "<a class='page-list' href='?page=$i'style=''>$i</a>";
-                    else
-                        echo "<a class='page-list-active' href='?page=$i'style=''>$i</a>";
-                }
-            ?>
-</div>
-<!-- list des pages end -->
+              $dir = "../UPLOAD/";
+
+              // how many files and directories exist in the directory
+              $files = scandir($dir);
+
+              $file_count = count($files) - 2; // subtract 2 for . and ..
+
+              // pagination
+              @$page = $_GET["page"];
+              if(empty($page)) $page = 1;
+              $nbr_elements_par_page = 5;
+              $nbr_de_pages = ceil($file_count / $nbr_elements_par_page);
+              $debut = 2 + ($page - 1) * $nbr_elements_par_page ;
+
+              // Loop through the directory
+              $files = array_slice(scandir($dir), $debut, 5); // slice array starting from index 2
+              foreach ($files as $file) {
+                  $id = uniqid();
+                  if (!in_array($file, array(".", ".."))) {
+                      if (is_dir($dir.$file)) {
+                          // Print the directory name
+                          echo "<tr><td style='color: #B49C73'><strong>".$file." : </strong></td><td></td></tr>";
+                          // Loop through the subdirectory
+                          $subdir_files = array_slice(scandir($dir.$file), 2);
+                          foreach ($subdir_files as $subdir_file) {
+                              // Print the subdirectory file name and a link to download it
+                              echo "<tr>";
+                              echo "   <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='../img/pdf.png' alt='twbs  width='32' height='32' class='flex-shrink-0'> ". $subdir_file." </td>";
+                              echo "   <td><a href='".$dir.$file."/".$subdir_file."' download><img src='../img/download.png' alt='Download' width='32' height='32'></a>";
+                              echo "   <a href='api/delete_file.php?file=".$dir.$file."/".$subdir_file."&id=".$id."'><img src='../img/delete.png' alt='Delete' width='32' height='32'></a></td>";
+                              echo "</tr>";
+                          }
+                      } else {
+                          // Print the file name and a link to download it
+                          echo "<tr>";
+                          echo "   <td>". $file." </td>";
+                          echo "   <td><a href='".$dir.$file."' download><img src='../img/download.png' alt='Download' width='32' height='32'></a>";
+                          echo "   <a href='api/delete_file.php?file=".$dir.$file."&id=".$id."'><img src='../img/delete.png' alt='Delete' width='32' height='32'></a></td>";
+                          echo "</tr>";
+                      }
+                  }
+              }
+
+              echo "</tbody>";
+              echo "</table>";
+
+              // pagination
+              echo "<div id='pagination'>";
+              for($i = 1; $i <= $nbr_de_pages; $i++) {
+                  if($page != $i)
+                      echo "<a class='page-list' href='?page=$i' style=''>$i</a>";
+                  else
+                      echo "<a class='page-list-active' href='?page=$i' style=''>$i</a>";
+              }
+              ?>
+
         </div>
         <!-- list des pages end -->
+
+        <!-- potential clients start -->
+        <!-- <h4 class="mb-3"><img src="../img/email_title.png" alt="twbs" height="150" class="flex-shrink-0">  Clients Potentiel</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Clients Potentiel</th>
+                <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>telecharger la list des emails des clients potentiel</td>
+                <td><a href="potential_clients.csv" download><img src='../img/download.png' alt='Download' width='32' height='32'></a></td>
+              </tr>
+              
+            </tbody>
+        </table> -->
+        <!-- potential clients end -->
       </div>
     </div>
   </main>

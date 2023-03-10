@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JUSTICE - Free Lawyer Website Template</title>
+    <title>Souidi-avocat</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -29,12 +29,13 @@
     
 
     <!--  Translation -->
-    <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
         Weglot.initialize({
             api_key: 'wg_988348f8d0f16e4ff3af1cc9c77a608b2'
         });
-    </script>
+    </script> -->
+
 </head>
 
 <body class="rtl">
@@ -130,40 +131,47 @@
                         <a class="navbar-brand col-lg-3 me-0" href="#"  style="color :#B49C73; font-size: 30pt;"><img src="img/logo_Ar.png" style="height :100px; z-index: 100"></a>
                         <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                             <li class="nav-item">
-                                <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                                <a href="index.php" class="nav-item nav-link active" style="font-size: 1.25rem">إستقبال</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#about" class="nav-item nav-link">A propos de nous</a>
+                                <a href="#about" class="nav-item nav-link" style="font-size: 1.25rem">معلومات عنا</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#services" class="nav-item nav-link">Nos pratiques</a>
+                                <a href="#services" class="nav-item nav-link" style="font-size: 1.25rem">خدماتنا</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#team" class="nav-item nav-link">Nos avocats</a>
+                                <a href="#team" class="nav-item nav-link" style="font-size: 1.25rem">خبرائنا</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#contact" class="nav-item nav-link ">Contact</a>
+                                <a href="#partners" class="nav-item nav-link" style="font-size: 1.25rem">شركاؤنا</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-item nav-link " onclick="openPopup()">à votre écoute</a>
+                                <a href="#contact" class="nav-item nav-link " style="font-size: 1.25rem">اتصل بنا</a>
                             </li>
+                            <!-- <li class="nav-item">
+                                <a href="#" class="nav-item nav-link " onclick="openPopup()" style="font-size: 1.25rem">في خدمتكم</a>
+                            </li> -->
                         </ul>
                         <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                                 <div class="d-inline-flex align-items-center p-2">
                                                 <a class="btn btn-sm " href="index.php" style="color : white;">
                                                     fr <img src="img/france.png" style="height: 30px; margin:5px;">
                                                 </a>
-                                                <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                                    <i style="color : white;" class="fab fa-facebook-f"></i>
+                                                <a  class="btn btn-sm  btn-sm-square mr-2" href="">
+                                                    <!-- <i style="color : white;" class="fab fa-facebook-f"></i> -->
+                                                    <img src="img/facebook.png" alt="twbs" width="32" height="32" class="flex-shrink-0">
                                                 </a>
-                                                <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                                    <i style="color : white;" class="fab fa-twitter"></i>
+                                                <a class="btn btn-sm  btn-sm-square mr-2"  href="">
+                                                    <!-- <i style="color : white;" class="fab fa-twitter"></i> -->
+                                                    <img src="img/twitter.png" alt="twbs" width="32" height="32" class="flex-shrink-0">
                                                 </a>
-                                                <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                                    <i style="color : white;" class="fab fa-linkedin-in"></i>
+                                                <a class="btn btn-sm btn-sm-square mr-2"  href="">
+                                                    <!-- <i style="color : white;" class="fab fa-linkedin-f"></i> -->
+                                                    <img src="img/linkedin.png" alt="twbs" width="32" height="32" class="flex-shrink-0">
                                                 </a>
-                                                <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
-                                                    <i style="color : white;" class="fab fa-instagram"></i>
+                                                <a class="btn btn-sm btn-sm-square mr-2"  href="">
+                                                    <!-- <i style="color : white;" class="fab fa-instagram-f"></i> -->
+                                                    <img src="img/instagram.png" alt="twbs" width="32" height="32" class="flex-shrink-0">
                                                 </a>
                                                 
                                 </div>
@@ -173,25 +181,24 @@
                     </nav>
                     <!-- navbar end -->
 
-                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
+                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
                     <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;"><b>Bureau d'avocat</b></h1><br />
-                            <h4 class="text-uppercase mb-4" style=" color :#B49C73; etter-spacing: 3px;"><i>conseil juridique, médiation, arbitrage & contentieux</i></h4>
+                            <h1 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;"><b>مكتب محاماة</b></h1><br />
+                            <h4 class="text-uppercase mb-4" style=" color :#B49C73; etter-spacing: 3px;"><i>نصيحة قانونية، وساطة، تحكيم، صياغة عقود ووثائق قانونية، والتحكيم في المنازعات.</i></h4>
 
-                            <h3 class="display-2 text-capitalize text-white mb-4">Nos clients sont au cœur de notre métier</h3>
-                            <a class="btn btn-primary py-3 px-5 mt-2" href="#appointement_start">Obtenir un rendez-vous</a>
+                            <h3 class="display-2 text-capitalize text-white mb-4">عملاؤنا هم في صميم عملنا</h3>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="#appointement_start">احصل على موعد</a>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item position-relative" style="height: 100vh; min-height: 400px;">
+                <div class="carousel-item position-relative active" style="height: 100vh; min-height: 400px;">
                     <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Les résultats que vous méritez</h4>
-                            <h3 class="display-2 text-capitalize text-white mb-4">Droit et Justice sont nos matières premières</h3>
-                            <a class="btn btn-primary py-3 px-5 mt-2" href="#">Appelez-nous maintenant</a>
+                            <h3 class="display-2 text-capitalize text-white mb-4">القانون والعدالة: <br /> ترسانتنا القانونية.</h3>
+                            <a class="btn btn-primary py-3 px-5 mt-2" href="#">اتصل بنا الآن</a>
                         </div>
                     </div>
                 </div>
@@ -220,22 +227,22 @@
                 </div>
                 <div class="col-lg-7 mt-4 mt-lg-0">
                     <input type="checkbox" id="check1" class="check" style="display: none;">
-                    <h2 class="position-relative text-center text-primary rounded p-3 mt-4 mb-4 d-none d-lg-block" style=" background-color:unset; background-color:#37373F; width: 350px; margin-right: -205px;" >37 ans d'experience en magistrature</h2>
-                    <h6 class="text-uppercase">En savoir plus sur nous</h6>
-                    <h1 class="mb-4">De nos différences nait la cohérence.</h1>
-                    <p>Fondé par les soins du Dr. My El Hassan Souidi, avocat au barreau de Casablanca/ Marrakech, Agrée près de la cour suprême de Rabat, et arbitre inscrit à l’ordre national des arbitres.</p><br />
+                    <h2 class="position-relative text-center text-primary rounded p-3 mt-4 mb-4 d-none d-lg-block" style=" background-color:unset; background-color:#37373F; width: 350px; margin-right: -205px;" >37 عاما من الخبرة القضائية</h2>
+                    <h6 class="text-uppercase">اعرف المزيد عنا</h6>
+                    <h1 class="mb-4">من خلافاتنا يأتي التماسك.</h1>
+                    <p>أسسة برعاية الدكتور مولاي الحسن السويدي ، محامي بنقابة الدار البيضاء / مراكش ، معتمد بالقرب من المحكمة العليا بالرباط ، ومحكم مسجل بالنظام الوطني للمحكمين.</p><br />
                     
                     <div class="content">
                         <p>
-                        Issu d’un cursus universitaire juridique solide, My El Hassan Souidi est titulaire d’une licence en droit privé , suite de quoi il obtient un Master en droit privé /sciences pénales , pour enfin achever ses études universitaires par un Doctorat en droit privé à la faculté des sciences juridiques et économiques Ibn Zohr d’Agadir.
-                        Lauréat de l’institut supérieur de la magistrature de Rabat , My El Hassan Souidi jouit d’un parcours professionnel judiciaire remarquable . Ayant exercé en qualité de Substitut du Procureur du Roi près du tribunal de première instance de Marrakech , également en qualité de substitut du Procureur Général du Roi près de la cour d’appel de Marrakech.<br />
+                        تخرجي من دورة جامعية قانونية قوية ، حاصل على إجازة في القانون الخاص ، وبعد ذلك حصل على درجة الماجستير في القانون الخاص / العلوم الجنائية ، ليكمل أخيرًا دراسته الجامعية بدرجة الدكتوراه في القانون الخاص من كلية الحقوق. والعلوم الاقتصادية ابن زهر أكادير.
+                         الحائز على جائزة المعهد العالي للقضاء بالرباط ، بلدي الحسن سويدي ، يتمتع بمهنة قضائية رائعة. عمل كنائب للمدعي العام بالقرب من المحكمة الابتدائية بمراكش ، وكذلك نائب المدعي العام للملك بالقرب من محكمة استئناف مراكش.<br />
                         <br />
-                        Le cabinet Maître My EL Hassan Souidi, a mis en place une équipe dotée de divers talents qui œuvrent pour être à la hauteur des enjeux et des responsabilités qui lui sont confiés.<br />
+                        أنشأت شركة الأستاذ مولاي الحسن السويدي فريقًا يضم العديد من المواهب التي تعمل على الارتقاء إلى مستوى التحديات والمسؤوليات الموكلة إليهم.<br />
                         <br />
-                        Il étoffe ses services par la collaboration avec un réseau d’experts pluridisciplinaires  aux compétences variées et aux parcours complémentaires.<br />
+                        توسع خدماتها من خلال التعاون مع شبكة من الخبراء متعددي التخصصات ذوي المهارات المتنوعة والخلفيات التكميلية. <br />
                         </p>   
                     </div>
-                    <label for="check1" class="btn btn-primary mt-2">encore plus</label>
+                    <label for="check1" class="btn btn-primary mt-2">اقرأ أكثر</label>
                 </div>
             </div>
         </div>
@@ -248,79 +255,34 @@
         <div class="container py-5">
             <div class="row" style="direction: ltr !important;">
                 
-                <div class="col-lg-9 pt-5 pt-lg-0">
-                    <div class="bg-primary rounded" style="height: 200px;"></div><!--à supprimer-->
+                <div class="col-lg-8 pt-5 pt-lg-0">
+                    <div class="bg-primary rounded" style="height: 200px; width:500px;"></div><!--à supprimer-->
                     <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
                         <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4" >
                             <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-landmark"></i>
+                                <i class="fa fa-2x fa-lightbulb"></i>
                             </div>
-                            <h5 class="mb-4 px-4">Du conseil <br >au <br >contentieux </h5>
-                            <input type="checkbox" id="check2" class="check" style="display: none;">
-                            <div class="content">
-                                <p class="m-0">
-                                    Le cabinet Souidi Avocat vous accompagne en conseil juridique ainsi qu'en contentieux dans l'ensemble des matières juridiques, pour toutes les formes de procédures et devant toutes les juridictions du royaume (civiles, pénales, commerciales, administratives etc. ….). <br />
-                                    <br />
-                                    A vocation généraliste, quel que soit votre statut particulier ou professionnel ; secteur privé ou public et quel que soit votre situation marocain ou étranger ; notre cabinet est votre partenaire juridique idéal tant en matière de conseil qu'en celle du contentieux.
-                                </p>
-                            </div>
-                            <label for="check2" class="btn btn-primary mt-2">encore plus</label>
+                            <h5 class="mb-4 px-4">من النصيحة إلى التقاضي<br /><br /></h5>
+                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#service1">اقرأ أكثر</button>
                         </div>
                         <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4" >
                             <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-users"></i>
+                                <i class="fa fa-2x fa-file-contract"></i>
                             </div>
-                            <h5 class="mb-4 px-4">Rédaction de contrats et actes juridiques</h5>
-                            <input type="checkbox" id="check3" class="check" style="display: none;">
-                            <div class="content">
-                                <p class="m-0">
-                                    Notre cabinet vous propose une rédaction sur mesure de vos contrats et actes juridiques qui, à la fois s’adapte à vos besoins et vous protège en cas de litige. <br />
-                                    <br />
-                                    Nous prenons en considération la particularité de chaque contrat et/ou acte juridique et nous l’établissons de manière minutieuse en toute adéquation avec vos situations. <br />
-                                </p>
-                            </div>
-                            <label for="check3" class="btn btn-primary mt-2">encore plus</label>
-
-                        </div>
-                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4" id="modif3">
-                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-hand-holding-usd"></i>
-                            </div>
-                            <h5 class="mb-4 px-4">Modes Alternatifs de règlement des conflits</h5>
-                            <input type="checkbox" id="check4" class="check" style="display: none;">
-                            <div class="content">
-                                <p>
-                                    Les MARC regroupent : la négociation, la médiation et l’arbitrage, qui s’appliquent aussi bien aux litiges d’affaires qu’entre particuliers, permettant ainsi de résoudre les conflits avec succès  et économie en temps et argent tout en préservant vos relations.<br />
-                                    <br />
-                                    Notre équipe a une veritable expertise à la pratique des MARC via ses experts spécialement formés à ces méthodes non judiciares.<br />
-
-                                </p>
-                            </div>
-                            <label for="check4" class="btn btn-primary mt-2">encore plus</label>
-                        </div>
-                        <!--another seervice-->
-                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
-                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
-                                <i class="fa fa-2x fa-gavel"></i>
-                            </div>
-                            <h5 class="mb-4 px-4">conseille juridique </h5>
-                            <input type="checkbox" id="check5" class="check" style="display: none;">
-                            <div class="content">
-                                <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p>
-                            </div>
-                            <label for="check5" class="btn btn-primary mt-2">encore plus</label>
+                            <h5 class="mb-4 px-4">صياغة العقود والمستندات القانونية</h5>
+                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#service2">اقرأ أكثر</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3" style="direction: rtl !important;">
-                    <h6 class="text-uppercase">Notre pratique</h6>
-                    <h1 class="mb-4">Nos domaines d’intervention </h1>
+                <div class="col-lg-4" style="direction: rtl !important;">
+                    <h5 class="text-uppercase">خدماتنا</h5>
+                    <h1 class="mb-4">مجالات تدخلنا </h1>
                     <p>
                     <lu>
-                        <li>Conseil juridique</li>
-                        <li>Les modes alternatifs de réglement des conflits De l'assisgnation à l'exécution</li>
-                        <li>Rédaction de contracts & actes juridiques</li>
+                        <li>المشورة القانونية</li>
+                        <li>صياغة العقود والمستندات القانونية</li>
+                        <li>دعوى</li>
                     </lu>
                     </p>
                 </div>
@@ -328,6 +290,53 @@
             </div>
         </div>
     </div>
+
+        <!-- services modals start -->
+        <div class="modal fade" tabindex="-1" id="service1"  aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+              <h6 class="modal-title text-center" style="font-size:1.5rem;">من النصيحة إلى التقاضي</h6>
+                <div class="icon-box bg-secondary text-primary mt-2 mb-4 center">
+                    <i class="fa fa-2x fa-lightbulb"></i>
+                </div>
+                <p class="mt-1 text-center">
+                شركة سويدي  يرافقك في الاستشارات القانونية وكذلك في التقاضي في جميع الأمور القانونية ، لجميع أشكال الإجراءات وأمام جميع محاكم المملكة (المدنية ، الجنائية ، التجارية ، الإدارية ، إلخ ...). <br />
+                <br />
+                بمهنة عامة ، مهما كانت حالتك الخاصة أو المهنية ؛ القطاع الخاص أو العام ومهما كان وضعك المغربي أو الأجنبي ؛ مكتبنا هو الشريك القانوني المثالي لك من حيث المشورة والتقاضي.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" tabindex="-1" id="service2"  aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body d-flex flex-column align-items-center">
+              <h6 class="modal-title text-center" style="font-size:1.5rem;">صياغة العقود والمستندات القانونية</h6>
+                <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                    <i class="fa fa-2x fa-file-contract"></i>
+                </div>
+                <p class="mt-1 text-center">
+                تقدم لك شركتنا صياغة مفصلة لعقودك وأعمالك القانونية التي تتكيف مع احتياجاتك وتحميك في حالة حدوث نزاع.<br />
+                <br />
+                نحن نأخذ في الاعتبار خصوصية كل عقد و / أو عمل قانوني ونقوم بتأسيسه بطريقة دقيقة بما يتناسب تمامًا مع مواقفك.<br />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- services modals end -->
+
     <!-- Services End -->
 
 
@@ -371,51 +380,50 @@
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-6 py-5">
                         <div class="rounded p-5 my-5" style="background: rgba(55, 55, 63, .7);" id="appointement_start">
-                            <h1 class="text-center text-white mb-4">Obtenir un rendez-vous</h1>
+                            <h1 class="text-center text-white mb-4">احصل على موعد</h1>
                             <form action="" method="POST">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control border-0 p-4" placeholder="Nom Complet" required="required" />
+                                    <input type="text" name="name" class="form-control border-0 p-4" placeholder="الاسم الكامل" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input  type="email" name="email" class="form-control border-0 p-4" placeholder="Votre Adresse Email" required="required" />
+                                    <input  type="email" name="email" class="form-control border-0 p-4" placeholder="البريد الإلكتروني" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" name="phone" class="form-control border-0 p-4" placeholder="Votre numero de telephone" required="required" />
+                                    <input type="number" name="phone" class="form-control border-0 p-4" placeholder="هاتف" required="required" />
                                 </div>
 
                                 <div class="form-row">
                                     <div class="col-6">
                                         <div class="form-group">
                                             <div class="date" id="date" data-target-input="nearest">
-                                                <input type="text" name="date" class="form-control border-0 p-4 datetimepicker-input" placeholder="Sélectionner une date" data-target="#date" data-toggle="datetimepicker"/>
+                                                <input type="text" name="date" class="form-control border-0 p-4 datetimepicker-input" placeholder="حدد تاريخ" data-target="#date" data-toggle="datetimepicker"/>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
                                             <div class="time" id="time" data-target-input="nearest">
-                                                <input type="text" name="hour" class="form-control border-0 p-4 datetimepicker-input" placeholder="Sélectionnez l'heure" data-target="#time" data-toggle="datetimepicker"/>
+                                                <input type="text" name="hour" class="form-control border-0 p-4 datetimepicker-input" placeholder="حدد الوقت" data-target="#time" data-toggle="datetimepicker"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <select name="method" class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>method de consultation</option>
-                                        <option value="1">à distance </option>
-                                        <option value="2">au bureau</option>
+                                        <option selected>طريقة الاستشارة</option>
+                                        <option value="1">عن بعد</option>
+                                        <option value="2">في المكتب</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <select name="service" class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Sélectionnez un service</option>
-                                        <option value="1">Droit des affaires </option>
-                                        <option value="2">Rédaction de contrats et actes juridiques</option>
-                                        <option value="3">Modes Alternatifs de règlement des conflits</option>
+                                        <option selected>اختر الخدمة</option>
+                                        <option value="1">قانون الأعمال</option>
+                                        <option value="2">صياغة العقود والمستندات القانونية</option>     
                                     </select>
                                 </div>
                                 <div>
-                                    <button name="submit" class="btn btn-primary btn-block border-0 py-3" type="submit">Obtenir un rendez-vous</button>
+                                    <button name="submit" class="btn btn-primary btn-block border-0 py-3" type="submit">احصل على موعد</button>
                                 </div>
                             </form>
                         </div>
@@ -438,28 +446,23 @@
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
                     <div style="background:#37373F; color:white; "class="feature-text  rounded p-lg-5">
-                        <h6 style="color:white;" class="text-uppercase">Pour-quoi nous choisir </h6>
+                        <h6 style="color:white;" class="text-uppercase">لماذا يجب أن تختارنا</h6>
                         <!--<h1 class="mb-4">Pourquoi nous choisir</h1>-->
-                        <h1 style="color:white;" class="text-uppercase">Porteur d'une nouvelle vision de la profession </h1><br />
+                        <h1 style="color:white;" class="text-uppercase">لماذا يجب أن تختارنالماذا يجب أن تختارنا</h1><br />
                         <br />
                         <div class="d-flex mb-4">
                             <div class="btn-primary btn-lg-square px-3" style="border-radius: 50px;">
                                 <h5 class="text-secondary m-0">01</h5>
                             </div>
                             <div class="ml-4">
-                                <h5 style="color:white;">Respect du serment de la profession </h5>
+                                <h4 style="color:white;">أداء يمين المهنة </h4>
                                 <input type="checkbox" id="check6" class="check" style="display: none;">
                                 <div class="content">
                                     <p>
-                                    Issu d’un cursus universitaire juridique solide, My El Hassan Souidi est titulaire d’une licence en droit privé , suite de quoi il obtient un Master en droit privé /sciences pénales , pour enfin achever ses études universitaires par un Doctorat en droit privé à la faculté des sciences juridiques et économiques Ibn Zohr d’Agadir.
-                                    Lauréat de l’institut supérieur de la magistrature de Rabat , My El Hassan Souidi jouit d’un parcours professionnel judiciaire remarquable . Ayant exercé en qualité de Substitut du Procureur du Roi près du tribunal de première instance de Marrakech , également en qualité de substitut du Procureur Général du Roi près de la cour d’appel de Marrakech.<br />
-                                    <br />
-                                    Le cabinet Maître My EL Hassan Souidi, a mis en place une équipe dotée de divers talents qui œuvrent pour être à la hauteur des enjeux et des responsabilités qui lui sont confiés.<br />
-                                    <br />
-                                    Il étoffe ses services par la collaboration avec un réseau d’experts pluridisciplinaires  aux compétences variées et aux parcours complémentaires.<br />
+                                    كرائد في احترام القانون والعدالة ، مكتبنا يقسم على ممارسة مهامه كمحام بكرامة وضمير واستقلال ونزاهة وإنسانية.
                                     </p>   
                                 </div>
-                                <label for="check6" class="btn btn-primary mt-2">encore plus</label>
+                                <label for="check6" class="btn btn-primary mt-2">اقرأ أكثر</label>
                                 <!--<p class="m-0">Notre cabinet est fondé sur le respect du droit et de la justice, donne serment d'exercer ses fonctions comme avocat avec dignité, conscience, indépendance, probité et humanité.</p>-->
                             </div>
                         </div>
@@ -468,19 +471,18 @@
                                 <h5 class="text-secondary m-0">02</h5>
                             </div>
                             <div class="ml-4">
-                                <h5 style="color:white;">Allégeance à la déontologie de la profession</h5>
+                                <h4 style="color:white;">الولاء لأخلاقيات المهنة</h4>
                                 <input type="checkbox" id="check7" class="check" style="display: none;">
                                 <div class="content">
                                     <p>
-                                    Issu d’un cursus universitaire juridique solide, My El Hassan Souidi est titulaire d’une licence en droit privé , suite de quoi il obtient un Master en droit privé /sciences pénales , pour enfin achever ses études universitaires par un Doctorat en droit privé à la faculté des sciences juridiques et économiques Ibn Zohr d’Agadir.
-                                    Lauréat de l’institut supérieur de la magistrature de Rabat , My El Hassan Souidi jouit d’un parcours professionnel judiciaire remarquable . Ayant exercé en qualité de Substitut du Procureur du Roi près du tribunal de première instance de Marrakech , également en qualité de substitut du Procureur Général du Roi près de la cour d’appel de Marrakech.<br />
-                                    <br />
-                                    Le cabinet Maître My EL Hassan Souidi, a mis en place une équipe dotée de divers talents qui œuvrent pour être à la hauteur des enjeux et des responsabilités qui lui sont confiés.<br />
-                                    <br />
-                                    Il étoffe ses services par la collaboration avec un réseau d’experts pluridisciplinaires  aux compétences variées et aux parcours complémentaires.<br />
+                                    الاقتناع بأن التقدير الصارم لأكسيولوجيا مهنة المحاماة هو الرافعة الرئيسية ، من ناحية ، لتعزيز الاحتراف وبالتالي درجة الثقة في هذه الصناعة ؛ ومن ناحية أخرى للحفاظ على كرامة ونزاهة المهنيين في هذه الهيئة.<br />
+                                    سويدي أفوكات يقسم الولاء لأركان المحامين:<br />
+                                    <li><b>وفاء</b></li>
+                                    <li><b>خصوصية</b></li>
+                                    <li><b>السر المهني</b></li>
                                     </p>   
                                 </div>
-                                <label for="check7" class="btn btn-primary mt-2">encore plus</label>
+                                <label for="check7" class="btn btn-primary mt-2">اقرأ أكثر</label>
                                 <!-- <p class="m-0">
                                 </p> -->
                             </div>
@@ -490,18 +492,18 @@
                                 <h5 class="text-secondary m-0">03</h5>
                             </div>
                             <div class="ml-4">
-                                <h5 style="color:white;">Notre trio gagnant </h5>
+                                <h4 style="color:white;">الثلاثي الفائز </h4>
                                 <input type="checkbox" id="check8" class="check" style="display: none;">
                                 <div class="content">
                                     <p>
                                         <lu>
-                                            <li><b style="color : #B49C73;">Le Savoir :</b> Maîtrise par excellence de la matière juridique et l’art de la plaidoirie avec un esprit de <b>dévouement.</b></li>
-                                            <li><b style="color : #B49C73;">Le Savoir-faire :</b> Méthodologie de travail fondée sur <b>l'efficacité</b>, <b>l'efficience</b> et la <b>diligence.</b></li>
-                                            <li><b style="color : #B49C73;">Le Savoir-être :</b> Relation-client bâtie sur la <b>confiance</b>, <b>la transparence</b> et la <b>disponibilité.</b></li> 
+                                            <li><b style="color : #B49C73;">معرفة :</b> إتقان ممتاز للمسائل القانونية وفن المناصرة بروح <b> التفاني. </ b></li>
+                                            <li><b style="color : #B49C73;">المعرفة بكيفية الفعل :</b> تعتمد منهجية العمل على <b> الفعالية </ b> و <b> الكفاءة </ b> و <b> الاجتهاد. </ b></li>
+                                            <li><b style="color : #B49C73;">مهارات:</b> علاقة العميل مبنية على <b> الثقة </ b> و <b> الشفافية </ b> و <b> التوفر. </ b></li> 
                                         </lu>
                                     </p>   
                                 </div>
-                                <label for="check8" class="btn btn-primary mt-2">encore plus</label>
+                                <label for="check8" class="btn btn-primary mt-2">اقرأ أكثر</label>
                                 <!--<p class="m-0">Proximité, expertise, implication, transversalité, et réactivité.<br />
                                 Les départements du cabinet font avant tout des relations professionnelles, des relations humaines. Ils sont organisés par pôles de compétences, qui s'impliquent totalement dans les dossiers qui leurs sont confiés en intervenant conjointement sur ceux qui sont transversales afin de répondre à vos attentes et honorer notre engagement d'être à vos côtés.-->
                                 </p>
@@ -521,8 +523,8 @@
             <div class="bg-action rounded" style="height: 500px;">
                 <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-7 text-center">
-                        <h1 class="text-white mb-4">Commençons. Appelez-nous maintenant pour une consultation </h1>
-                        <a class="btn btn-primary py-3 px-5 mt-2" href="#">Appelez-nous maintenant</a>
+                        <h1 class="text-white mb-4">لنبدأ. اتصل بنا الآن للتشاور</h1>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="#">اتصل بنا الآن</a>
                     </div>
                 </div>
             </div>
@@ -534,8 +536,8 @@
     <div class="container-fluid py-5" id="team">
         <div class="container py-5">
             <div class="text-center pb-2">
-                <h6 class="text-uppercase">Notre Equipe</h6>
-                <h1 class="mb-4">Rencontrez Notre Equipe</h1>
+                <h5 class="text-uppercase">فريقنا</h5>
+                <h1 class="mb-4">التق بفريقنا</h1>
             </div>
             <div class="row" style="direction: ltr !important;">
                 <div class="col-12">
@@ -547,10 +549,9 @@
                     ?>
                         <div class="team-item text-center bg-white rounded overflow-hidden pt-4" >
                             <h5 class="mb-2 px-4 text-truncate"><?= $employee['nom_completAr'] ?></h5>
-                            <p class="mb-3 px-4 text-truncate"><?= $employee['domaineAr'] ?></p>
+                            <p class="mb-3 px-4 text-truncate" style="font-size:1rem;"><?= $employee['domaineAr'] ?></p>
                             <div class="team-img position-relative">
-                            <!-- <div class="img-fluid" style="background : url('admin/api/<?= $employee['file_path'] ?>'); height : 250px; background-repeat: no-repeat; background-position: center;" alt=""></div> -->
-                                <img class="img-fluid" src="<?= $employee['file_path'] ?>" alt="">
+                                <img class="img-fluid" src="<?= $employee['file_path'] ?>" style="height:240px;"  alt="">
                                 <div class="team-social">
                                     <button class="btn btn-outline-light mx-1" data-bs-toggle="modal" data-bs-target="#team_<?=$employee['id'] ?>">Afficher</button>
                                 </div>
@@ -566,11 +567,11 @@
     <!-- Team End -->
 
     <!-- Partners Start -->
-    <div class="container-fluid py-5" id="team">
+    <div class="container-fluid py-5" id="partners">
         <div class="container py-5">
             <div class="text-center pb-2">
-                <h6 class="text-uppercase">Notre Partenaires</h6>
-                <h1 class="mb-4">Rencontrez Nos Partenaires</h1>
+                <h5 class="text-uppercase">شركاؤنا</h5>
+                <h1 class="mb-4">تعرف على شركائنا</h1>
             </div>
             <div class="row" style="direction: ltr !important;">
                 <div class="col-12">
@@ -582,12 +583,12 @@
                     ?>
                         <div class="team-item text-center bg-white rounded overflow-hidden pt-4" >
                             <h5 class="mb-2 px-4 text-truncate"><?= $partner['nom_completAr'] ?></h5>
-                            <p class="mb-3 px-4 text-truncate"><?= $partner['domaineAr'] ?></p>
+                            <p class="mb-3 px-4 text-truncate" style="font-size:1rem;"><?= $partner['domaineAr'] ?></p>
                             <div class="team-img position-relative">
                             <!-- <div class="img-fluid" style="background : url('admin/api/<?= $partner['file_path'] ?>'); height : 250px; background-repeat: no-repeat; background-position: center;" alt=""></div> -->
-                                <img class="img-fluid" src="<?= $partner['file_path'] ?>" alt="">
+                                <img class="img-fluid" src="<?= $partner['file_path'] ?>" style="height:240px;"  alt="">
                                 <div class="team-social">
-                                    <button class="btn btn-outline-light mx-1" data-bs-toggle="modal" data-bs-target="#team_<?=$partner['id'] ?>">Afficher</button>
+                                    <button class="btn btn-outline-light mx-1" data-bs-toggle="modal" data-bs-target="#team_<?=$partner['id'] ?>">عرض</button>
                                 </div>
                             </div>
                         </div>
@@ -610,13 +611,13 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel"><?= $partner['nom_completAr'] ?></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 class="modal-title fs-5 text-center" id="exampleModalLabel"><?= $partner['nom_completAr'] ?></h1>
               </div>
               <div class="modal-body">
-              <h6 class="modal-title"><?= $partner['domaineAr'] ?></h6>
-              <div class="text-center"><img src="admin/api/<?= $partner['file_path'] ?>" class="img-fluid rounded" alt="..."></div>
-              <p class="mt-1"><?= $partner['descrAr'] ?></p>
+              <h6 class="modal-title text-center" style="font-size:1.5rem;"><?= $partner['domaineAr'] ?></h6>
+              <div class="text-center"><img src="<?= $partner['file_path'] ?>" style="height:300px;" class="img-fluid rounded" alt="..."></div></br>
+              <p class="mt-1 text-center"><?= $partner['descrAr'] ?></p>
               </div>
             </div>
           </div>
@@ -629,13 +630,13 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel"><?= $employee['nom_completAr'] ?></h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" ><?= $employee['nom_completAr'] ?></h1>
               </div>
               <div class="modal-body">
-              <h6 class="modal-title"><?= $employee['domaineAr'] ?></h6>
-              <div class="text-center"><img src="admin/api/<?= $employee['file_path'] ?>" class="img-fluid rounded" alt="..."></div>
-              <p class="mt-1"><?= $employee['descrAr'] ?></p>
+              <h6 class="modal-title text-center" style="font-size:1.5rem;"><?= $employee['domaineAr'] ?></h6>
+              <div class="text-center"><img src="<?= $employee['file_path'] ?>" style="height:300px;" class="img-fluid rounded" alt="..."></div></br>
+              <p class="mt-1 text-center"><?= $employee['descrAr'] ?></p>
               </div>
             </div>
           </div>
@@ -657,8 +658,8 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Notre bureau</h5>
-                        <p class="m-0">123 Street, Marrakech, Maroc</p>
+                        <h5 class="text-white">مكتبنا</h5>
+                        <p class="m-0">123 شارع مراكش ، المغرب</p>
                     </div>
                 </div>
             </div>
@@ -666,7 +667,7 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-envelope-open text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Envoyez-nous un email</h5>
+                        <h5 class="text-white">ارسل لنا عبر البريد الإلكتروني</h5>
                         <p class="m-0">info@example.com</p>
                     </div>
                 </div>
@@ -675,7 +676,7 @@
                 <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
                     <i class="fa fa-2x fa-phone-alt text-primary"></i>
                     <div class="ml-3">
-                        <h5 class="text-white">Appelez-nous</h5>
+                        <h5 class="text-white">اتصل بنا</h5>
                         <p class="m-0">+012 345 6789</p>
                     </div>
                 </div>
@@ -691,12 +692,23 @@
                         <img src="img/logo_Ar.png" style="z-index: 50">
                     </a>
                     
-                    <p>Nos clients sont au cœur de notre métier.</p>
                     <div class="d-flex justify-content-start mt-4">
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"  href="#"><i class="fab fa-instagram"></i></a>
+                                                <a class="btn btn-sm btn-sm-square mr-2" href="" style="margin:15px;">
+                                                    <!-- <i style="color : white;" class="fab fa-facebook-f"></i> -->
+                                                    <img src="img/facebook.png" alt="twbs" width="46" height="46" class="flex-shrink-0" >
+                                                </a>
+                                                <a class="btn btn-sm btn-sm-square mr-2" href="" style="margin:15px;">
+                                                    <!-- <i style="color : white;" class="fab fa-twitter"></i> -->
+                                                    <img src="img/twitter.png" alt="twbs" width="46" height="46" class="flex-shrink-0">
+                                                </a>
+                                                <a class="btn btn-sm btn-sm-square mr-2" href="" style="margin:15px;"> 
+                                                    <!-- <i style="color : white;" class="fab fa-linkedin-f"></i> -->
+                                                    <img src="img/linkedin.png" alt="twbs" width="46" height="46" class="flex-shrink-0">
+                                                </a>
+                                                <a class="btn btn-sm btn-sm-square mr-2" href="" style="margin:15px;">
+                                                    <!-- <i style="color : white;" class="fab fa-instagram-f"></i> -->
+                                                    <img src="img/instagram.png" alt="twbs" width="46" height="46" class="flex-shrink-0">
+                                                </a>
                     </div>                    
                 </div>
             </div>
@@ -728,8 +740,8 @@
             ?>
                 <div>
                     <form action="" method="POST">
-                    <h4 class="font-weight-semi-bold text-primary mb-4">News</h4>
-                    <p>S'inscrire pour recevoir des nouvelles.</p>
+                    <h4 class="font-weight-semi-bold text-primary mb-4">أخبار</h4>
+                    <p>اشترك لتلقي الأخبار.</p>
                     <div class="w-100">
                         <div class="input-group">
                             <div class="input-group-append">
@@ -747,13 +759,13 @@
         </div>
 
 
-        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);" >
+        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05); font-size:0.75;" >
             
-            <div class="col-md-6 text-center text-md-right">
+            <div class="col-md-6 text-center text-md-right" style="font-size:12px">
                 <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
             </div>
-            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Souidi Law</a>. Tous les droits sont réservés.</p>
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0" style="font-size:12px">
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Souidi Law</a>. Tous les droits sont réservés</p>
             </div>
         </div>
     </div>
@@ -779,7 +791,7 @@
                             <small><?=$article['ndate'] ?></small>
                     </div>
                     <div>
-                        <p> <?=$article['descriptionAr'] ?> </p>
+                        <p style="font-size:1rem;"> <?=$article['descriptionAr'] ?> </p>
                     </div>
                 </div>
             <?php }?>

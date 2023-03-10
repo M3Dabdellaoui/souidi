@@ -43,7 +43,7 @@ if (isset($_POST['login']) && isset($_POST['pass'])) {
   if ($block_check_result) {
     $block_time = $block_check_result['block_time'];
     $shaped_block_time=date("H:i a",$block_time);
-    $error = "Your IP has been blocked due to multiple failed login attempts. Please try again after $shaped_block_time.";
+    $error = "You have been blocked due to multiple failed login attempts. Please try again after $shaped_block_time.";
     $_SESSION["autoriser"] = "non";
   } else {
 
@@ -93,9 +93,9 @@ if (isset($_POST['login']) && isset($_POST['pass'])) {
           $block_ip_stmt->bindValue(':ip_address', $ip_address, PDO::PARAM_STR);
           $block_ip_stmt->bindValue(':block_time', $block_time, PDO::PARAM_STR);
           $block_ip_stmt->execute();
-          $error = "Your IP has been blocked due to multiple failed login attempts. Please try again after $shaped_block_time.";
+          $error = "You have been blocked due to multiple failed login attempts. Please try again after $shaped_block_time.";
         } else {
-          $error = "Invalid login credentials. $max_failed_attempts failed attempts will result in IP block.";
+          $error = "Invalid login credentials. $max_failed_attempts failed attempts.";
         }
         $_SESSION["autoriser"] = "non";
       }

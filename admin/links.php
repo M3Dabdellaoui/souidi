@@ -154,7 +154,6 @@
         <img src="../img/new_logo.png" alt="twbs" height="80px" class="flex-shrink-0">
       </a>
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
         <a type="button" class="btn btn-primary" href="deconnexion.php">Déconnexion</a>
       </div>
     </header>
@@ -220,11 +219,29 @@
                 </div>
               </div>
             </a>
+            <a href="file.manager.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/calendar.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Gestion des rendez-vous</h6>
+                  <p class="mb-0 opacity-75">consulter les rendez-vous avec clients.</p>
+                </div>
+              </div>
+            </a>
+            <a href="potential_clients.php" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              <img src="../img/email.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">Clients Potentiel</h6>
+                  <p class="mb-0 opacity-75">Télecharger la liste des emails des clients potentiel</p>
+                </div>
+              </div>
+            </a>
           </div>        
       </div>
       <!-- UPLOAD LINK start -->
       <div class="col-md-7 col-lg-8">
-        <h1><img src="../img/link.png" alt="twbs" height="60" class="rounded-circle flex-shrink-0"> Lien Secret</h1><br />
+        <h1><img src="../img/links.png" alt="twbs" height="100" class="flex-shrink-0">  Lien Secret</h1><br />
         <?php
             // set the salt 
             $salt = "mysecret"; 
